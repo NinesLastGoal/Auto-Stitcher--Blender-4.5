@@ -33,13 +33,14 @@ logger = logging.getLogger(__name__)
 
 def create_corpse_stitcher_node_group() -> Optional[bpy.types.GeometryNodeTree]:
     """
-    Weaves forbidden arcane magic to construct a Geometry Node tree for corpse stitching.
+    Creates a Geometry Node tree for procedural stitch generation on mesh surfaces.
     
-    Channels the dark power of Nazarick to analyze undead mesh topology and manifest
-    unholy stitching patterns with soul-bound parameter adaptation from the abyss.
+    Builds a comprehensive node network that analyzes mesh topology, generates stitch
+    placement points along edges, and creates 3D cylindrical thread geometry with 
+    intelligent surface offset (perfect for necromantic corpse binding rituals).
     
     Returns:
-        Optional[bpy.types.GeometryNodeTree]: The summoned node group, or None if the ritual fails
+        Optional[bpy.types.GeometryNodeTree]: The created node group, or None if creation fails
     """
     node_group_name = "Nines Corpse Stitcher"
     logger.info(f"Invoking dark ritual to summon stitcher node group: '{node_group_name}'")
@@ -61,23 +62,23 @@ def create_corpse_stitcher_node_group() -> Optional[bpy.types.GeometryNodeTree]:
         
         corpse_area_socket = interface.new_socket(name="Corpse Area", in_out='INPUT', socket_type='NodeSocketFloatFactor')
         corpse_area_socket.attribute_domain = 'POINT'
-        corpse_area_socket.description = "Soul group defining where forbidden stitches shall manifest"
+        corpse_area_socket.description = "Vertex group defining where stitches should be placed (ideal for binding corpse seams)"
         
         soul_count_socket = interface.new_socket(name="Soul Thread Count", in_out='INPUT', socket_type='NodeSocketInt')
         soul_count_socket.default_value, soul_count_socket.min_value, soul_count_socket.max_value = 50, 1, 5000
-        soul_count_socket.description = "Number of ethereal threads to bind the corpse"
+        soul_count_socket.description = "Total number of stitches to generate (more stitches = tighter corpse binding)"
         
         stitch_length_socket = interface.new_socket(name="Necromantic Length", in_out='INPUT', socket_type='NodeSocketFloat')
         stitch_length_socket.default_value, stitch_length_socket.min_value, stitch_length_socket.max_value = 0.05, 0.001, 1.0
-        stitch_length_socket.description = "Length of individual stitches from the void"
+        stitch_length_socket.description = "Length of individual stitches along mesh surface (controls stitch span)"
 
         thread_thickness_socket = interface.new_socket(name="Abyssal Thread Thickness", in_out='INPUT', socket_type='NodeSocketFloat')
         thread_thickness_socket.default_value, thread_thickness_socket.min_value, thread_thickness_socket.max_value = 0.002, 0.0001, 0.1
-        thread_thickness_socket.description = "Radius of the unholy thread manifestation"
+        thread_thickness_socket.description = "Radius of cylindrical thread geometry (visual thickness of binding threads)"
 
         rotation_socket = interface.new_socket(name="Cursed Rotation", in_out='INPUT', socket_type='NodeSocketFloat')
         rotation_socket.subtype, rotation_socket.default_value = 'ANGLE', 0.0
-        rotation_socket.description = "Additional twist of dark magic applied to each stitch"
+        rotation_socket.description = "Additional rotation applied to each stitch around its local axis"
 
         offset_socket = interface.new_socket(name="Soul Offset", in_out='INPUT', socket_type='NodeSocketFloat')
         offset_socket.default_value, offset_socket.min_value, offset_socket.max_value = 0.001, -0.1, 0.1
@@ -210,7 +211,7 @@ class OBJECT_OT_AddCorpseStitchesOperator(bpy.types.Operator):
     """
     bl_idname = "object.add_corpse_stitches"
     bl_label = "Summon Corpse Stitches"
-    bl_description = "Channel lich magic to bind forbidden stitches using necromantic Geometry Nodes"
+    bl_description = "Add procedural stitching modifier to mesh using Geometry Nodes (ideal for corpse binding)"
     bl_options = {'REGISTER', 'UNDO'}
 
     @classmethod
@@ -278,7 +279,7 @@ class OBJECT_OT_SummonNazarickBlessingOperator(bpy.types.Operator):
     """
     bl_idname = "object.summon_nazarick_blessing"
     bl_label = "Summon Nazarick's Blessing"
-    bl_description = "Invoke diagnostic ritual to verify lich magic installation and power flow"
+    bl_description = "Run installation diagnostics to verify addon functionality (blessed by Nazarick)"
     bl_options = {'REGISTER'}
 
     def execute(self, context):

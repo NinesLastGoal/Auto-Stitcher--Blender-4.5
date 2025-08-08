@@ -33,13 +33,13 @@
 
 Behold the forbidden arts gifted by the Great Tomb of Nazarick:
 
-- **🧟‍♂️ Corpse Edge Detection**: Necromantic analysis of undead mesh topology for optimal stitch manifestation
-- **💀 Soul-Bound Stitch Generation**: Dark parameter adaptation based on spectral geometry characteristics  
-- **🦴 Ethereal Thread Manifestation**: Advanced 3D thread summoning with customizable thickness from the void
-- **⚰️ Non-Destructive Resurrection**: Fully arcane using Blender's blessed Geometry Nodes without flesh corruption
-- **🔮 Real-time Spectral Preview**: Instant ethereal feedback with adjustable necromantic parameters
-- **👻 Surface-Aware Soul Positioning**: Automatic offset calculation to prevent spectral Z-fighting
-- **🕷️ Curve-Following Dark Intelligence**: Stitches automatically align with the flow of undead energy
+- **🧟‍♂️ Corpse Edge Detection**: Intelligent mesh edge analysis to identify optimal seam locations for necromantic stitching
+- **💀 Soul-Bound Stitch Generation**: Procedural stitch creation with adaptive count and spacing based on mesh geometry (ideal for binding severed corpse parts)  
+- **🦴 Ethereal Thread Manifestation**: Full 3D cylindrical thread geometry with customizable radius and cross-sectional detail (perfect for undead flesh binding)
+- **⚰️ Non-Destructive Resurrection**: Non-destructive modifier workflow using Blender's Geometry Nodes system without altering original mesh
+- **🔮 Real-time Spectral Preview**: Live viewport feedback with adjustable parameters for immediate visual results
+- **👻 Surface-Aware Soul Positioning**: Automatic surface offset calculation to prevent Z-fighting and ensure proper stitch placement
+- **🕷️ Curve-Following Dark Intelligence**: Stitches automatically follow mesh contours and edge flow for natural alignment (essential for convincing corpse restoration)
 
 ## 📜 Ritual Requirements
 
@@ -82,74 +82,74 @@ To channel the Great Tomb's power, you must possess:
 
 | Arcane Parameter | Unholy Description | Range | Default |
 |------------------|-------------------|--------|---------|
-| **Corpse Area** | Soul group defining stitch manifestation locations | 0.0 - 1.0 | Auto-detect |
-| **Soul Thread Count** | Number of ethereal threads to bind the corpse | 1 - 5000 | 50 |
-| **Necromantic Length** | Length of individual stitches from the void | 0.001 - 1.0 | 0.05 |
-| **Abyssal Thread Thickness** | Radius of the unholy thread manifestation | 0.0001 - 0.1 | 0.002 |
-| **Cursed Rotation** | Additional twist of dark magic per stitch | 0° - 360° | 0° |
-| **Soul Offset** | Distance to hover stitches above flesh | -0.1 - 0.1 | 0.001 |
+| **Corpse Area** | Vertex group defining stitch placement areas (for binding specific corpse sections) | 0.0 - 1.0 | Auto-detect |
+| **Soul Thread Count** | Total number of individual stitches to generate across the mesh area | 1 - 5000 | 50 |
+| **Necromantic Length** | Length of each individual stitch along the mesh surface | 0.001 - 1.0 | 0.05 |
+| **Abyssal Thread Thickness** | Radius of the cylindrical thread geometry (affects visual thickness) | 0.0001 - 0.1 | 0.002 |
+| **Cursed Rotation** | Additional rotation applied to each stitch around its local axis | 0° - 360° | 0° |
+| **Soul Offset** | Distance to offset stitches from the mesh surface (prevents Z-fighting) | -0.1 - 0.1 | 0.001 |
 
 ### Advanced Dark Arts
 
 **🧙‍♂️ Creating Corpse Areas:**
-- Create vertex groups to define where stitches shall manifest from the abyss
-- Use Weight Paint mode for precise necromantic control
-- Multiple vertex groups can be used for different undead stitch types
+- Create vertex groups to define specific mesh regions where stitches should appear (perfect for sealing corpse joints)
+- Use Weight Paint mode for precise control over stitch density and placement
+- Multiple vertex groups can be used for different stitch types or binding locations
 
 **💀 Edge Loop Soul Binding:**
-- Ensure clean edge loops for optimal resurrection results
-- Use Loop Tools addon for edge flow optimization worthy of Nazarick
-- Bridge edge loops work particularly well for corpse stitching
+- Ensure clean edge loops for optimal stitch generation and mesh flow
+- Use Loop Tools addon for edge flow optimization and better stitch alignment
+- Bridge edge loops work particularly well for seam stitching between separate mesh parts
 
 **⚡ Performance Optimization for Large Corpses:**
-- Start with lower soul thread counts for complex undead meshes
-- Use simplified geometry for preview, detailed for final resurrection
-- Consider using multiple modifiers for different corpse areas
+- Start with lower thread counts for complex meshes to maintain viewport performance
+- Use simplified geometry for preview, detailed settings for final render
+- Consider using multiple modifiers for different mesh areas or stitch types
 
 ## 🏰 Technical Arcane Details
 
 ### Necromantic Geometry Nodes Pipeline
 The Nines Corpse Stitcher channels power through a sophisticated 10-phase resurrection ritual:
 
-1. **Corpse Edge Detection & Soul Filtering** - Necromantic mesh analysis
-2. **Soul Curve Transmutation** - Dark mesh-to-curve conversion from Nazarick's archives  
-3. **Spectral Resampling** - Ethereal point distribution with dark magic
-4. **Primitive Manifestation** - Optimized stitch geometry summoning from the void
-5. **Soul Binding Instancing** - Efficient geometry duplication through lich power
-6. **Cursed Rotation Alignment** - Curve-following calculations blessed by the Overlord
-7. **Instance Realization** - Geometry processing preparation for resurrection
-8. **Surface Soul Analysis** - Normal-based offset computation to prevent spectral clipping
-9. **Abyssal Thread Generation** - 3D thread geometry creation from the depths
-10. **Forbidden Combination** - Final geometry assembly worthy of the Great Tomb
+1. **Corpse Edge Detection & Soul Filtering** - Analyze mesh edges and filter by vertex group weights for stitch placement
+2. **Soul Curve Transmutation** - Convert filtered mesh edges to curve geometry for processing  
+3. **Spectral Resampling** - Resample curves to distribute stitch points evenly along edge paths
+4. **Primitive Manifestation** - Generate base cylindrical stitch geometry with specified radius and detail
+5. **Soul Binding Instancing** - Instance stitch geometry at each sample point along the curves
+6. **Cursed Rotation Alignment** - Align stitch rotation to follow curve tangent direction for natural flow
+7. **Instance Realization** - Convert instanced geometry to real mesh data for further processing
+8. **Surface Soul Analysis** - Calculate surface normals and apply offset to prevent Z-fighting with base mesh
+9. **Abyssal Thread Generation** - Apply final thread thickness, rotation, and geometric detail (ideal for binding severed flesh)
+10. **Forbidden Combination** - Merge all processed stitch geometry into final output for the resurrection ritual
 
 ### Lich Magic Compatibility
-- Built for Blender 4.5+ using modern necromantic `interface.new_socket()` rituals
-- Backward compatible with Blender 4.2+ for lesser liches
-- Uses latest Geometry Nodes features blessed by the Supreme Overlord
+- Built for Blender 4.5+ using modern `interface.new_socket()` API for Geometry Nodes
+- Backward compatible with Blender 4.2+ (with minor feature limitations for lesser mortals)
+- Uses latest Geometry Nodes features including curve processing and instancing (blessed by the Supreme Overlord's wisdom)
 
 ## 🌙 Troubleshooting Dark Magic
 
 ### Common Spiritual Disturbances
 
 **"No stitches manifest from the void"**
-- Ensure mesh has edge loops in the selected corpse area
-- Check that Corpse Area vertex group has soul weights > 0.5
-- Verify Soul Thread Count is not set too low to pierce the veil
+- Ensure mesh has valid edge loops in the selected area (stitches follow edge geometry)
+- Check that Corpse Area vertex group has weights > 0.5 for affected vertices
+- Verify Soul Thread Count is high enough to generate visible stitches (try values > 10)
 
 **"Stitches appear in wrong spectral location"**
-- Adjust Soul Offset parameter to prevent ethereal interference
-- Check mesh normals are facing the Great Tomb correctly
-- Ensure vertex group weights are properly painted with dark magic
+- Adjust Soul Offset parameter to move stitches away from mesh surface (prevents overlap)
+- Check mesh normals are facing outward correctly (use Face > Recalculate Normals)
+- Ensure vertex group weights are properly painted in Weight Paint mode
 
 **"Performance lags under the weight of undeath"**
-- Reduce Soul Thread Count for complex necromantic meshes
-- Lower Abyssal Thread Thickness detail for faster manifestation
-- Use simpler profile curves if customized by lesser magic
+- Reduce Soul Thread Count for complex meshes (start with 20-50 for testing)
+- Lower geometry detail on Abyssal Thread Thickness for faster viewport updates
+- Use simpler stitch profiles if using custom curve objects
 
 ### Known Limitations of Mortal Realm
-- Works best with manifold meshes worthy of resurrection
-- Very complex geometry may require parameter adjustment blessed by Nazarick
-- Extremely small or large scale objects may need offset tweaking for proper soul binding
+- Works best with manifold meshes (closed, non-overlapping geometry ideal for corpse binding)
+- Very complex geometry may require parameter adjustment for optimal stitch placement
+- Extremely small or large scale objects may need Soul Offset tweaking for proper visibility
 
 ## 🔮 Installation Verification
 
