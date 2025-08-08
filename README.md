@@ -24,19 +24,24 @@
 
 ## 🔧 Installation
 
-### Method 1: Direct Download
-1. Download `neural_stitcher.py` from this repository
+### Method 1: ZIP Package Installation (Recommended)
+1. Download `neural_stitcher_addon.zip` from this repository
 2. Open Blender → Edit → Preferences → Add-ons
-3. Click "Install..." and select the downloaded file
+3. Click "Install..." and select the downloaded ZIP file
 4. Enable "Neural Stitcher - AI-Powered Procedural Stitches"
+5. You should see a success popup message!
 
-### Method 2: Manual Installation
-1. Copy `neural_stitcher.py` to your Blender addons directory:
+### Method 2: Folder Installation
+1. Download and extract the `neural_stitcher_addon` folder
+2. Copy the folder to your Blender addons directory:
    - **Windows**: `%APPDATA%\Blender Foundation\Blender\4.5\scripts\addons\`
    - **macOS**: `~/Library/Application Support/Blender/4.5/scripts/addons/`
    - **Linux**: `~/.config/blender/4.5/scripts/addons/`
-2. Restart Blender
-3. Enable the addon in Preferences → Add-ons
+3. Restart Blender
+4. Enable the addon in Preferences → Add-ons
+
+### ⚠️ Troubleshooting Installation
+If the addon doesn't appear in the Add-ons panel, see [INSTALLATION_GUIDE.md](INSTALLATION_GUIDE.md) for detailed troubleshooting steps.
 
 ## 🎯 Usage
 
