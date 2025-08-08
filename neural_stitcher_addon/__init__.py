@@ -11,12 +11,12 @@ Version: 4.0.1
 """
 
 bl_info = {
-    "name": "Neural Stitcher - AI-Powered Procedural Stitches",
+    "name": "Neural Stitcher - Procedural Stitches",
     "author": "AI Assistant (Enhanced from Gemini)",
     "version": (4, 0, 1),
     "blender": (4, 5, 0),
     "location": "View3D > Modifiers > Add Modifier",
-    "description": "AI-enhanced, robust, non-destructive Geometry Node modifier for intelligent procedural stitching along edge loops",
+    "description": "Professional, non-destructive Geometry Node modifier for procedural stitching along edge loops",
     "warning": "",
     "doc_url": "https://github.com/NinesLastGoal/Auto-Stitcher--Blender-4.5",
     "category": "Object",
@@ -216,13 +216,13 @@ def create_neural_stitch_node_group() -> Optional[bpy.types.GeometryNodeTree]:
 
 class OBJECT_OT_AddNeuralStitchesOperator(bpy.types.Operator):
     """
-    Intelligent operator for adding AI-enhanced procedural stitches to mesh objects.
+    Operator for adding procedural stitches to mesh objects.
     
     Features smart object validation, error handling, and user feedback.
     """
     bl_idname = "object.add_neural_stitches"
     bl_label = "Add Neural Stitches"
-    bl_description = "Add AI-powered procedural stitches using advanced Geometry Nodes"
+    bl_description = "Add procedural stitches using advanced Geometry Nodes"
     bl_options = {'REGISTER', 'UNDO'}
 
     @classmethod

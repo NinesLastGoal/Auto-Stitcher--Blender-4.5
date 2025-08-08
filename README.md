@@ -1,9 +1,9 @@
-# Neural Stitcher - AI-Powered Procedural Stitching for Blender 4.5+
+# Neural Stitcher - Procedural Stitching for Blender 4.5+
 
 > **🎉 FIXED: Addon now properly appears in Blender's Add-ons panel!** 
 > The installation issues have been resolved in v4.0.1. Download `neural_stitcher_addon.zip` and install via Blender's Add-ons preferences.
 
-🧠✨ **An intelligent Blender addon that creates sophisticated procedural stitches using advanced Geometry Nodes and AI-enhanced algorithms.**
+🧵✨ **A powerful Blender addon that creates sophisticated procedural stitches using advanced Geometry Nodes.**
 
 ![Blender 4.5+](https://img.shields.io/badge/Blender-4.5%2B-orange.svg)
 ![Version](https://img.shields.io/badge/Version-4.0.1-blue.svg)
@@ -12,13 +12,13 @@
 
 ## 🚀 Features
 
-- **AI-Enhanced Edge Detection**: Intelligent analysis of mesh topology for optimal stitch placement
-- **Adaptive Stitch Generation**: Smart parameter adaptation based on geometry characteristics  
-- **Realistic Thread Simulation**: Advanced 3D thread geometry with customizable thickness
+- **Smart Edge Detection**: Automatic analysis of mesh topology for optimal stitch placement
+- **Customizable Stitch Generation**: Flexible parameters for different stitching styles  
+- **Realistic Thread Simulation**: 3D thread geometry with adjustable thickness and detail
 - **Non-Destructive Workflow**: Fully procedural using Blender's Geometry Nodes
 - **Real-time Preview**: Instant feedback with adjustable parameters
 - **Surface-Aware Positioning**: Automatic offset calculation to prevent Z-fighting
-- **Curve-Following Intelligence**: Stitches automatically align with edge flow
+- **Curve-Following Alignment**: Stitches automatically align with edge flow and tangents
 
 ## 📋 Requirements
 
@@ -94,16 +94,16 @@ Run [test_installation.py](test_installation.py) in Blender's Python Console to 
 ### Geometry Nodes Pipeline
 The Neural Stitcher uses a sophisticated 10-phase processing pipeline:
 
-1. **Edge Detection & Filtering** - AI-enhanced mesh analysis
-2. **Curve Conversion** - Smart mesh-to-curve conversion  
-3. **Adaptive Resampling** - Intelligent point distribution
-4. **Primitive Creation** - Optimized stitch geometry generation
-5. **Smart Instancing** - Efficient geometry duplication
-6. **Rotation Alignment** - Curve-following calculations
-7. **Instance Realization** - Geometry processing preparation
+1. **Edge Detection & Filtering** - Mesh topology analysis for stitch placement
+2. **Curve Conversion** - Mesh-to-curve conversion with selection filtering  
+3. **Adaptive Resampling** - Point distribution along curves based on stitch count
+4. **Primitive Creation** - Individual stitch line geometry generation
+5. **Smart Instancing** - Efficient placement of stitches along paths
+6. **Rotation Alignment** - Automatic alignment with curve tangents
+7. **Instance Realization** - Geometry processing for mesh operations
 8. **Surface Analysis** - Normal-based offset computation
-9. **Thread Generation** - 3D thread geometry creation
-10. **Intelligent Combination** - Final geometry assembly
+9. **Thread Generation** - 3D cylindrical thread geometry creation
+10. **Geometry Combination** - Final assembly with original mesh
 
 ### API Compatibility
 - Built for Blender 4.5+ using modern `interface.new_socket()` API
@@ -137,12 +137,12 @@ The Neural Stitcher uses a sophisticated 10-phase processing pipeline:
 ## 🔄 Version History
 
 ### v4.0.0 (Current)
-- 🆕 Complete AI-powered rebranding and modernization
+- 🆕 Complete addon modernization and restructuring
 - 🐛 Fixed critical stitch line creation bug
-- ⚡ Enhanced error handling and logging
-- 📚 Comprehensive documentation and type hints
-- 🎨 Modern code style and structure
-- 🧠 Intelligent parameter validation
+- ⚡ Enhanced error handling and user feedback
+- 📚 Comprehensive documentation and installation guides
+- 🎨 Modern code structure and organization
+- 🔧 Improved parameter validation and ranges
 
 ### v3.0.0 (Legacy)
 - Original "Procedural Stitches" implementation
@@ -164,7 +164,7 @@ This project is licensed under the GPL-3.0 License - see the LICENSE file for de
 ## 🙏 Acknowledgments
 
 - Original concept and implementation by Gemini
-- Enhanced and modernized by AI Assistant
+- Enhanced and modernized by AI Assistant  
 - Blender development team for the amazing Geometry Nodes system
 - Community feedback and testing
 
@@ -172,4 +172,4 @@ This project is licensed under the GPL-3.0 License - see the LICENSE file for de
 
 **Made with ❤️ for the Blender community**
 
-*Neural Stitcher - Where AI meets creative stitching* 🧵🤖
+*Neural Stitcher - Professional procedural stitching* 🧵⚡
