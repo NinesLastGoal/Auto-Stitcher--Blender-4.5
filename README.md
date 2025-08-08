@@ -1,10 +1,14 @@
 # Neural Stitcher - AI-Powered Procedural Stitching for Blender 4.5+
 
+> **🎉 FIXED: Addon now properly appears in Blender's Add-ons panel!** 
+> The installation issues have been resolved in v4.0.1. Download `neural_stitcher_addon.zip` and install via Blender's Add-ons preferences.
+
 🧠✨ **An intelligent Blender addon that creates sophisticated procedural stitches using advanced Geometry Nodes and AI-enhanced algorithms.**
 
 ![Blender 4.5+](https://img.shields.io/badge/Blender-4.5%2B-orange.svg)
-![Version](https://img.shields.io/badge/Version-4.0.0-blue.svg)
+![Version](https://img.shields.io/badge/Version-4.0.1-blue.svg)
 ![License](https://img.shields.io/badge/License-GPL--3.0-green.svg)
+![Status](https://img.shields.io/badge/Status-Fixed%20%26%20Working-brightgreen.svg)
 
 ## 🚀 Features
 
@@ -42,6 +46,9 @@
 
 ### ⚠️ Troubleshooting Installation
 If the addon doesn't appear in the Add-ons panel, see [INSTALLATION_GUIDE.md](INSTALLATION_GUIDE.md) for detailed troubleshooting steps.
+
+### 🧪 Test Your Installation
+Run [test_installation.py](test_installation.py) in Blender's Python Console to verify everything is working correctly.
 
 ## 🎯 Usage
 
