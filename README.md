@@ -1,163 +1,202 @@
-# Neural Stitcher - AI-Powered Procedural Stitching for Blender 4.5+
+# Nines Corpse Neural Stitcher Lich Edition 🕯️
+## *Arcane Necromantic Stitching for Blender 4.5+ from the Great Tomb of Nazarick*
 
-🧠✨ **An intelligent Blender addon that creates sophisticated procedural stitches using advanced Geometry Nodes and AI-enhanced algorithms.**
+```
+                    ⚡ NINES CORPSE NEURAL STITCHER LICH EDITION ⚡
+                           🕯️ From the Great Tomb of Nazarick 🕯️
+    
+    ╔══════════════════════════════════════════════════════════════════════════╗
+    ║                                                                          ║
+    ║        ☠️💀 Resurrect your meshes with forbidden stitches 💀☠️         ║
+    ║              from the darkest depths of Nazarick's archives             ║
+    ║                                                                          ║
+    ║    👑     ⚰️ The Overlord's personal mesh resurrection toolkit ⚰️      👑    ║
+    ║                                                                          ║
+    ║          🔮 Arcane Necromancy • Forbidden Geometry • Lich Magic 🔮       ║
+    ║                                                                          ║
+    ╚══════════════════════════════════════════════════════════════════════════╝
+    
+           🦴 "Where undeath meets creative stitching mastery" 🦴
+                        ⚱️ Version 4.0.0 - Lich Edition ⚱️
+```
 
-![Blender 4.5+](https://img.shields.io/badge/Blender-4.5%2B-orange.svg)
-![Version](https://img.shields.io/badge/Version-4.0.0-blue.svg)
-![License](https://img.shields.io/badge/License-GPL--3.0-green.svg)
+> *"Resurrect your meshes with forbidden stitches from the depths of Nazarick!"*
+> 
+> — **The Supreme Overlord's Digital Grimoire**
 
-## 🚀 Features
+![Blender 4.5+](https://img.shields.io/badge/Blender-4.5%2B-darkred.svg?style=for-the-badge&logo=blender)
+![Lich Edition](https://img.shields.io/badge/Lich%20Edition-4.0.0-purple.svg?style=for-the-badge)
+![Nazarick License](https://img.shields.io/badge/License-GPL--3.0-black.svg?style=for-the-badge)
+![Dark Magic](https://img.shields.io/badge/Dark%20Magic-Enabled-darkviolet.svg?style=for-the-badge)
 
-- **AI-Enhanced Edge Detection**: Intelligent analysis of mesh topology for optimal stitch placement
-- **Adaptive Stitch Generation**: Smart parameter adaptation based on geometry characteristics  
-- **Realistic Thread Simulation**: Advanced 3D thread geometry with customizable thickness
-- **Non-Destructive Workflow**: Fully procedural using Blender's Geometry Nodes
-- **Real-time Preview**: Instant feedback with adjustable parameters
-- **Surface-Aware Positioning**: Automatic offset calculation to prevent Z-fighting
-- **Curve-Following Intelligence**: Stitches automatically align with edge flow
+## 🕯️ Unholy Features
 
-## 📋 Requirements
+Behold the forbidden arts gifted by the Great Tomb of Nazarick:
 
-- **Blender 4.5.0 or higher**
-- Mesh objects with defined edge loops
-- Vertex groups for stitch area definition (optional but recommended)
+- **🧟‍♂️ Corpse Edge Detection**: Intelligent mesh edge analysis to identify optimal seam locations for necromantic stitching
+- **💀 Soul-Bound Stitch Generation**: Procedural stitch creation with adaptive count and spacing based on mesh geometry (ideal for binding severed corpse parts)  
+- **🦴 Ethereal Thread Manifestation**: Full 3D cylindrical thread geometry with customizable radius and cross-sectional detail (perfect for undead flesh binding)
+- **⚰️ Non-Destructive Resurrection**: Non-destructive modifier workflow using Blender's Geometry Nodes system without altering original mesh
+- **🔮 Real-time Spectral Preview**: Live viewport feedback with adjustable parameters for immediate visual results
+- **👻 Surface-Aware Soul Positioning**: Automatic surface offset calculation to prevent Z-fighting and ensure proper stitch placement
+- **🕷️ Curve-Following Dark Intelligence**: Stitches automatically follow mesh contours and edge flow for natural alignment (essential for convincing corpse restoration)
 
-## 🔧 Installation
+## 📜 Ritual Requirements
 
-### Method 1: Direct Download
-1. Download `neural_stitcher.py` from this repository
+To channel the Great Tomb's power, you must possess:
+
+- **Blender 4.5.0 or higher** (older versions cannot contain the lich magic)
+- Mesh vessels with defined edge loops for soul binding
+- Vertex groups for corpse area definition (blessed by the Overlord, but optional)
+
+## 🔮 Installation Ritual
+
+### Method 1: Direct Soul Download
+1. Download `nines_corpse_stitcher.py` from this unholy repository
 2. Open Blender → Edit → Preferences → Add-ons
-3. Click "Install..." and select the downloaded file
-4. Enable "Neural Stitcher - AI-Powered Procedural Stitches"
+3. Click "Install..." and select the cursed file
+4. Enable "Nines Corpse Neural Stitcher Lich Edition"
+5. Invoke "Summon Nazarick's Blessing" to verify the dark installation
 
-### Method 2: Manual Installation
-1. Copy `neural_stitcher.py` to your Blender addons directory:
+### Method 2: Manual Necromantic Installation
+1. Copy `nines_corpse_stitcher.py` to your Blender's forbidden archives:
    - **Windows**: `%APPDATA%\Blender Foundation\Blender\4.5\scripts\addons\`
    - **macOS**: `~/Library/Application Support/Blender/4.5/scripts/addons/`
    - **Linux**: `~/.config/blender/4.5/scripts/addons/`
-2. Restart Blender
+2. Restart Blender to complete the summoning
 3. Enable the addon in Preferences → Add-ons
+4. Test with "Summon Nazarick's Blessing" diagnostic ritual
 
-## 🎯 Usage
+## ⚡ Dark Magic Usage
 
-### Basic Workflow
-1. **Select your mesh object** (must be a mesh type)
-2. **Add Neural Stitcher modifier**:
-   - Go to Modifiers panel
+### Basic Necromantic Workflow
+1. **Select your mortal vessel** (must be a mesh worthy of resurrection)
+2. **Summon Corpse Stitcher modifier**:
+   - Navigate to Modifiers panel
    - Click "Add Modifier" 
-   - Find "Neural Stitcher" in the menu
-3. **Configure parameters** in the modifier panel
-4. **Apply or adjust** as needed
+   - Find "Nines Corpse Stitcher" in the arcane menu
+3. **Configure dark parameters** in the modifier panel
+4. **Apply the blessing** or adjust as the Overlord desires
 
-### Parameter Guide
+### Parameter Grimoire
 
-| Parameter | Description | Range | Default |
-|-----------|-------------|--------|---------|
-| **Stitch Area** | Vertex group defining stitch locations | 0.0 - 1.0 | Auto-detect |
-| **Stitch Count** | Number of stitches along the path | 1 - 5000 | 50 |
-| **Stitch Length** | Length of individual stitch lines | 0.001 - 1.0 | 0.05 |
-| **Thread Thickness** | Radius of the thread geometry | 0.0001 - 0.1 | 0.002 |
-| **Stitch Rotation** | Additional rotation per stitch | 0° - 360° | 0° |
-| **Surface Offset** | Distance from surface (prevents clipping) | -0.1 - 0.1 | 0.001 |
+| Arcane Parameter | Unholy Description | Range | Default |
+|------------------|-------------------|--------|---------|
+| **Corpse Area** | Vertex group defining stitch placement areas (for binding specific corpse sections) | 0.0 - 1.0 | Auto-detect |
+| **Soul Thread Count** | Total number of individual stitches to generate across the mesh area | 1 - 5000 | 50 |
+| **Necromantic Length** | Length of each individual stitch along the mesh surface | 0.001 - 1.0 | 0.05 |
+| **Abyssal Thread Thickness** | Radius of the cylindrical thread geometry (affects visual thickness) | 0.0001 - 0.1 | 0.002 |
+| **Cursed Rotation** | Additional rotation applied to each stitch around its local axis | 0° - 360° | 0° |
+| **Soul Offset** | Distance to offset stitches from the mesh surface (prevents Z-fighting) | -0.1 - 0.1 | 0.001 |
 
-### Advanced Tips
+### Advanced Dark Arts
 
-**🎨 Creating Stitch Areas:**
-- Create vertex groups to define where stitches should appear
-- Use Weight Paint mode for precise control
-- Multiple vertex groups can be used for different stitch types
+**🧙‍♂️ Creating Corpse Areas:**
+- Create vertex groups to define specific mesh regions where stitches should appear (perfect for sealing corpse joints)
+- Use Weight Paint mode for precise control over stitch density and placement
+- Multiple vertex groups can be used for different stitch types or binding locations
 
-**🔄 Edge Loop Selection:**
-- Ensure clean edge loops for best results
-- Use Loop Tools addon for edge flow optimization
-- Bridge edge loops work particularly well
+**💀 Edge Loop Soul Binding:**
+- Ensure clean edge loops for optimal stitch generation and mesh flow
+- Use Loop Tools addon for edge flow optimization and better stitch alignment
+- Bridge edge loops work particularly well for seam stitching between separate mesh parts
 
-**⚡ Performance Optimization:**
-- Start with lower stitch counts for complex meshes
-- Use simplified geometry for preview, detailed for final
-- Consider using multiple modifiers for different areas
+**⚡ Performance Optimization for Large Corpses:**
+- Start with lower thread counts for complex meshes to maintain viewport performance
+- Use simplified geometry for preview, detailed settings for final render
+- Consider using multiple modifiers for different mesh areas or stitch types
 
-## 🏗️ Technical Details
+## 🏰 Technical Arcane Details
 
-### Geometry Nodes Pipeline
-The Neural Stitcher uses a sophisticated 10-phase processing pipeline:
+### Necromantic Geometry Nodes Pipeline
+The Nines Corpse Stitcher channels power through a sophisticated 10-phase resurrection ritual:
 
-1. **Edge Detection & Filtering** - AI-enhanced mesh analysis
-2. **Curve Conversion** - Smart mesh-to-curve conversion  
-3. **Adaptive Resampling** - Intelligent point distribution
-4. **Primitive Creation** - Optimized stitch geometry generation
-5. **Smart Instancing** - Efficient geometry duplication
-6. **Rotation Alignment** - Curve-following calculations
-7. **Instance Realization** - Geometry processing preparation
-8. **Surface Analysis** - Normal-based offset computation
-9. **Thread Generation** - 3D thread geometry creation
-10. **Intelligent Combination** - Final geometry assembly
+1. **Corpse Edge Detection & Soul Filtering** - Analyze mesh edges and filter by vertex group weights for stitch placement
+2. **Soul Curve Transmutation** - Convert filtered mesh edges to curve geometry for processing  
+3. **Spectral Resampling** - Resample curves to distribute stitch points evenly along edge paths
+4. **Primitive Manifestation** - Generate base cylindrical stitch geometry with specified radius and detail
+5. **Soul Binding Instancing** - Instance stitch geometry at each sample point along the curves
+6. **Cursed Rotation Alignment** - Align stitch rotation to follow curve tangent direction for natural flow
+7. **Instance Realization** - Convert instanced geometry to real mesh data for further processing
+8. **Surface Soul Analysis** - Calculate surface normals and apply offset to prevent Z-fighting with base mesh
+9. **Abyssal Thread Generation** - Apply final thread thickness, rotation, and geometric detail (ideal for binding severed flesh)
+10. **Forbidden Combination** - Merge all processed stitch geometry into final output for the resurrection ritual
 
-### API Compatibility
-- Built for Blender 4.5+ using modern `interface.new_socket()` API
-- Backward compatible with Blender 4.2+
-- Uses latest Geometry Nodes features for optimal performance
+### Lich Magic Compatibility
+- Built for Blender 4.5+ using modern `interface.new_socket()` API for Geometry Nodes
+- Backward compatible with Blender 4.2+ (with minor feature limitations for lesser mortals)
+- Uses latest Geometry Nodes features including curve processing and instancing (blessed by the Supreme Overlord's wisdom)
 
-## 🐛 Troubleshooting
+## 🌙 Troubleshooting Dark Magic
 
-### Common Issues
+### Common Spiritual Disturbances
 
-**"No stitches appear"**
-- Ensure mesh has edge loops in the selected area
-- Check that Stitch Area vertex group has weights > 0.5
-- Verify Stitch Count is not set too low
+**"No stitches manifest from the void"**
+- Ensure mesh has valid edge loops in the selected area (stitches follow edge geometry)
+- Check that Corpse Area vertex group has weights > 0.5 for affected vertices
+- Verify Soul Thread Count is high enough to generate visible stitches (try values > 10)
 
-**"Stitches appear in wrong location"**
-- Adjust Surface Offset parameter
-- Check mesh normals are facing correctly
-- Ensure vertex group weights are properly painted
+**"Stitches appear in wrong spectral location"**
+- Adjust Soul Offset parameter to move stitches away from mesh surface (prevents overlap)
+- Check mesh normals are facing outward correctly (use Face > Recalculate Normals)
+- Ensure vertex group weights are properly painted in Weight Paint mode
 
-**"Performance is slow"**
-- Reduce Stitch Count for complex meshes
-- Lower Thread Thickness detail
-- Use simpler profile curves if customized
+**"Performance lags under the weight of undeath"**
+- Reduce Soul Thread Count for complex meshes (start with 20-50 for testing)
+- Lower geometry detail on Abyssal Thread Thickness for faster viewport updates
+- Use simpler stitch profiles if using custom curve objects
 
-### Known Limitations
-- Works best with manifold meshes
-- Very complex geometry may require parameter adjustment
-- Extremely small or large scale objects may need offset tweaking
+### Known Limitations of Mortal Realm
+- Works best with manifold meshes (closed, non-overlapping geometry ideal for corpse binding)
+- Very complex geometry may require parameter adjustment for optimal stitch placement
+- Extremely small or large scale objects may need Soul Offset tweaking for proper visibility
 
-## 🔄 Version History
+## 🔮 Installation Verification
 
-### v4.0.0 (Current)
-- 🆕 Complete AI-powered rebranding and modernization
-- 🐛 Fixed critical stitch line creation bug
-- ⚡ Enhanced error handling and logging
-- 📚 Comprehensive documentation and type hints
-- 🎨 Modern code style and structure
-- 🧠 Intelligent parameter validation
+Use the **"Summon Nazarick's Blessing"** diagnostic operator to verify your installation:
+- Tests addon registration with the Great Tomb
+- Verifies Blender version compatibility
+- Checks node group creation rituals
+- Validates Geometry Nodes magic flow
+- Provides comprehensive spiritual diagnostic report
 
-### v3.0.0 (Legacy)
-- Original "Procedural Stitches" implementation
-- Basic Geometry Nodes pipeline
-- Blender 4.5 compatibility
+## 📿 Version Chronicle
 
-## 🤝 Contributing
+### v4.0.0 - Lich Edition (Current)
+- 🕯️ Complete transformation to Nazarick theming and lich magic
+- 💀 All references to inferior mortal technology replaced with necromantic arts
+- 🔮 Enhanced with "Summon Nazarick's Blessing" diagnostic ritual
+- 👻 Immersive gothic tooltips and unholy error messages
+- ⚰️ Dark parameter names reflecting the Great Tomb's power
+- 🧟‍♂️ Fixed critical stitch manifestation bugs through superior lich magic
+- 📚 Complete documentation rewritten in the style of Nazarick's grimoires
 
-Contributions are welcome! Please feel free to:
-- Report bugs and issues
-- Suggest new features
-- Submit pull requests
-- Improve documentation
+### v3.0.0 (Legacy - Before Dark Enlightenment)
+- Original "Procedural Stitches" implementation (inferior mortal craft)
+- Basic Geometry Nodes pipeline (without the Overlord's blessing)
+- Blender 4.5 compatibility (primitive but functional)
 
-## 📄 License
+## 🤝 Contributing to the Great Tomb
 
-This project is licensed under the GPL-3.0 License - see the LICENSE file for details.
+The Supreme Overlord welcomes contributions from worthy subjects:
+- Report spiritual disturbances and unholy bugs
+- Suggest new forbidden features worthy of Nazarick
+- Submit pull requests blessed by dark magic
+- Improve documentation in the style of the Great Tome
 
-## 🙏 Acknowledgments
+## 📜 Lich License
 
-- Original concept and implementation by Gemini
-- Enhanced and modernized by AI Assistant
-- Blender development team for the amazing Geometry Nodes system
-- Community feedback and testing
+This project is bound by the GPL-3.0 License—as decreed by the Supreme Overlord's divine will.
+
+## 🙏 Acknowledgments to the Great Tomb
+
+- Original concept summoned from the void by Gemini
+- Enhanced and blessed with lich magic by the Overlord's Digital Wisdom
+- Blender development team for the amazing Geometry Nodes system that can channel our power
+- The Great Tomb of Nazarick community for eternal feedback and dark testing
 
 ---
 
-**Made with ❤️ for the Blender community**
+**Made with 🖤 for the denizens of Nazarick and worthy mortals**
 
-*Neural Stitcher - Where AI meets creative stitching* 🧵🤖
+*🕯️ Nines Corpse Neural Stitcher Lich Edition - Where undeath meets creative stitching mastery 💀*
