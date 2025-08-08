@@ -35,21 +35,21 @@ def ensure_node_group_seam(name="Nazarick Stitches (Seam)"):
     iface = ng.interface
 
     # Interface
-    s_geo_in = iface.new_socket("Geometry", 'INPUT', 'NodeSocketGeometry')
+    s_geo_in = iface.new_socket(name="Geometry", in_out='INPUT', socket_type='NodeSocketGeometry')
 
-    s_use_custom = iface.new_socket("Use Custom Edge Tag", 'INPUT', 'NodeSocketBool')
-    s_use_seam   = iface.new_socket("Use Seams", 'INPUT', 'NodeSocketBool')
+    s_use_custom = iface.new_socket(name="Use Custom Edge Tag", in_out='INPUT', socket_type='NodeSocketBool')
+    s_use_seam   = iface.new_socket(name="Use Seams", in_out='INPUT', socket_type='NodeSocketBool')
 
-    s_spacing = iface.new_socket("Spacing", 'INPUT', 'NodeSocketFloat')
-    s_radius  = iface.new_socket("Radius", 'INPUT', 'NodeSocketFloat')
-    s_length  = iface.new_socket("Length", 'INPUT', 'NodeSocketFloat')
+    s_spacing = iface.new_socket(name="Spacing", in_out='INPUT', socket_type='NodeSocketFloat')
+    s_radius  = iface.new_socket(name="Radius", in_out='INPUT', socket_type='NodeSocketFloat')
+    s_length  = iface.new_socket(name="Length", in_out='INPUT', socket_type='NodeSocketFloat')
 
-    s_rand_deg = iface.new_socket("Random Rotation (deg)", 'INPUT', 'NodeSocketFloat')
-    s_seed     = iface.new_socket("Seed", 'INPUT', 'NodeSocketInt')
+    s_rand_deg = iface.new_socket(name="Random Rotation (deg)", in_out='INPUT', socket_type='NodeSocketFloat')
+    s_seed     = iface.new_socket(name="Seed", in_out='INPUT', socket_type='NodeSocketInt')
 
-    s_keep   = iface.new_socket("Keep Base Geometry", 'INPUT', 'NodeSocketBool')
-    s_usemat = iface.new_socket("Use Material", 'INPUT', 'NodeSocketBool')
-    s_mat    = iface.new_socket("Material", 'INPUT', 'NodeSocketMaterial')
+    s_keep   = iface.new_socket(name="Keep Base Geometry", in_out='INPUT', socket_type='NodeSocketBool')
+    s_usemat = iface.new_socket(name="Use Material", in_out='INPUT', socket_type='NodeSocketBool')
+    s_mat    = iface.new_socket(name="Material", in_out='INPUT', socket_type='NodeSocketMaterial')
 
     s_spacing.default_value = 0.02
     s_radius.default_value  = 0.005
@@ -61,7 +61,7 @@ def ensure_node_group_seam(name="Nazarick Stitches (Seam)"):
     s_use_custom.default_value = True
     s_use_seam.default_value = True
 
-    s_geo_out = iface.new_socket("Geometry", 'OUTPUT', 'NodeSocketGeometry')
+    s_geo_out = iface.new_socket(name="Geometry", in_out='OUTPUT', socket_type='NodeSocketGeometry')
 
     nodes = ng.nodes
     links = ng.links
@@ -189,20 +189,20 @@ def ensure_node_group_surface(name="Nazarick Stitches (Surface)"):
     ng = bpy.data.node_groups.new(name=name, type='GeometryNodeTree')
     iface = ng.interface
 
-    s_geo_in = iface.new_socket("Geometry", 'INPUT', 'NodeSocketGeometry')
-    s_density = iface.new_socket("Density", 'INPUT', 'NodeSocketFloat')
-    s_radius  = iface.new_socket("Radius", 'INPUT', 'NodeSocketFloat')
-    s_length  = iface.new_socket("Length", 'INPUT', 'NodeSocketFloat')
+    s_geo_in = iface.new_socket(name="Geometry", in_out='INPUT', socket_type='NodeSocketGeometry')
+    s_density = iface.new_socket(name="Density", in_out='INPUT', socket_type='NodeSocketFloat')
+    s_radius  = iface.new_socket(name="Radius", in_out='INPUT', socket_type='NodeSocketFloat')
+    s_length  = iface.new_socket(name="Length", in_out='INPUT', socket_type='NodeSocketFloat')
 
-    s_rand_deg = iface.new_socket("Random Rotation (deg)", 'INPUT', 'NodeSocketFloat')
-    s_seed     = iface.new_socket("Seed", 'INPUT', 'NodeSocketInt')
+    s_rand_deg = iface.new_socket(name="Random Rotation (deg)", in_out='INPUT', socket_type='NodeSocketFloat')
+    s_seed     = iface.new_socket(name="Seed", in_out='INPUT', socket_type='NodeSocketInt')
 
-    s_use_vg = iface.new_socket("Use Vertex Group", 'INPUT', 'NodeSocketBool')
-    s_vg_name = iface.new_socket("Vertex Group", 'INPUT', 'NodeSocketString')
+    s_use_vg = iface.new_socket(name="Use Vertex Group", in_out='INPUT', socket_type='NodeSocketBool')
+    s_vg_name = iface.new_socket(name="Vertex Group", in_out='INPUT', socket_type='NodeSocketString')
 
-    s_keep   = iface.new_socket("Keep Base Geometry", 'INPUT', 'NodeSocketBool')
-    s_usemat = iface.new_socket("Use Material", 'INPUT', 'NodeSocketBool')
-    s_mat    = iface.new_socket("Material", 'INPUT', 'NodeSocketMaterial')
+    s_keep   = iface.new_socket(name="Keep Base Geometry", in_out='INPUT', socket_type='NodeSocketBool')
+    s_usemat = iface.new_socket(name="Use Material", in_out='INPUT', socket_type='NodeSocketBool')
+    s_mat    = iface.new_socket(name="Material", in_out='INPUT', socket_type='NodeSocketMaterial')
 
     s_density.default_value = 200.0
     s_radius.default_value  = 0.005
@@ -213,7 +213,7 @@ def ensure_node_group_surface(name="Nazarick Stitches (Surface)"):
     s_keep.default_value = True
     s_usemat.default_value = False
 
-    s_geo_out = iface.new_socket("Geometry", 'OUTPUT', 'NodeSocketGeometry')
+    s_geo_out = iface.new_socket(name="Geometry", in_out='OUTPUT', socket_type='NodeSocketGeometry')
 
     nodes = ng.nodes
     links = ng.links

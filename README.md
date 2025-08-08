@@ -1,137 +1,127 @@
-Neural Stitcher – Procedural Stitching for Blender 4.5+
-Crafted under the silent watch of the Great Tomb of Nazarick. All who contribute are reminded: diligence is respected, idleness is noted.
+# Nazarick Stitcher — Procedural Stitches for Blender 4.5
 
-🎉 FIXED: Addon now properly appears in Blender's Add-ons panel!
-The installation issues have been resolved in v4.0.1. Download neural_stitcher_addon.zip and install via Blender's Add-ons preferences.
+*Crafted under the watchful gaze of Nazarick. Precision and patience guide every stitch.*
 
-🧵✨ A powerful Blender addon for sophisticated procedural stitches using advanced Geometry Nodes.
+![Blender 4.5+](https://img.shields.io/badge/Blender-4.5%2B-orange.svg) ![Version](https://img.shields.io/badge/Version-1.1.0-blue.svg) ![License](https://img.shields.io/badge/License-GPL--3.0-green.svg) ![Status](https://img.shields.io/badge/Status-Working-brightgreen.svg)
 
-![Blender 4.5+](https://img.shields.io/badge/Blender-4.5%2B-orange.svg) ![Version](https://img.shields.io/badge/Version-4.0.1-blue.svg) ![License](https://img.shields.io/badge/License-GPL--3.0-green.svg) ![Status](https://img.shields.io/badge/Status-Fixed%20%26%20Working-brightgreen.svg)
+## ✨ Overview
 
-🚀 Features
-Smart Edge Detection: Automatic analysis of mesh topology for optimal stitch placement
-Customizable Stitch Generation: Flexible parameters for a variety of stitching styles
-Realistic Thread Simulation: 3D thread geometry with adjustable thickness and detail
-Non-Destructive Workflow: Fully procedural via Blender's Geometry Nodes
-Real-time Preview: Instant feedback with adjustable parameters
-Surface-Aware Positioning: Automatic offset calculation prevents Z-fighting
-Curve-Following Alignment: Stitches align with edge flow and tangents
-<sub>Contributors are reminded: Only precise and robust features will be tolerated under Nazarick’s gaze.</sub>
+A powerful Blender addon that creates sophisticated procedural stitches using advanced Geometry Nodes. Perfect for adding realistic stitching details to clothing, leather goods, fabric, and other sewn materials.
 
-📋 Requirements
-Blender 4.5.0 or higher
-Mesh objects with defined edge loops
-Vertex groups for stitch area definition (optional but recommended)
-<sub>Do not attempt to bypass requirements; Nazarick’s patience is not infinite.</sub>
+<!-- Placeholder for Albedo & User Image -->
+*[Image placeholder: Albedo and user in matching outfits would go here]*
 
-🔧 Installation
-Method 1: ZIP Package Installation (Recommended)
-Download neural_stitcher_addon.zip from this repository
-Open Blender → Edit → Preferences → Add-ons
-Click "Install..." and select the downloaded ZIP file
-Enable "Neural Stitcher - AI-Powered Procedural Stitches"
-You should see a success popup message!
-Method 2: Folder Installation
-Download and extract the neural_stitcher_addon folder
-Copy the folder to your Blender addons directory:
-Windows: %APPDATA%\Blender Foundation\Blender\4.5\scripts\addons\
-macOS: ~/Library/Application Support/Blender/4.5/scripts/addons/
-Linux: ~/.config/blender/4.5/scripts/addons/
-Restart Blender
-Enable the addon in Preferences → Add-ons
-⚠️ Troubleshooting Installation
-If the addon doesn't appear in the Add-ons panel, see INSTALLATION_GUIDE.md for detailed troubleshooting.
+## 🎯 Features
 
-🧪 Test Your Installation
-Run test_installation.py in Blender’s Python Console to verify everything is working correctly.
+- **Smart Edge Detection**: Automatic analysis of mesh topology for optimal stitch placement
+- **Dual Placement Modes**: 
+  - Along tagged edges/seams for precise control
+  - Surface distribution for decorative stitching
+- **Customizable Parameters**: Adjustable spacing, size, rotation, and materials
+- **Non-Destructive Workflow**: Fully procedural via Geometry Nodes
+- **Real-time Preview**: Instant feedback with parameter adjustments
+- **Material Integration**: Optional material assignment for realistic thread appearance
 
-<sub>Should errors occur, resolve them swiftly—Nazarick favors those who persevere.</sub>
+*"Only precise and robust features will be tolerated under Nazarick's gaze."*
 
-🏗️ Technical Details
-Geometry Nodes Pipeline
-The Neural Stitcher leverages a modern 10-phase processing pipeline for robust, flexible results:
+## 📋 Requirements
 
-Edge Detection & Filtering: Mesh topology analysis for stitch placement
-Curve Conversion: Mesh-to-curve with selection filtering
-Adaptive Resampling: Point distribution along curves based on stitch count
-Primitive Creation: Individual stitch line geometry generation
-Smart Instancing: Efficient placement of stitches
-Rotation Alignment: Automatic alignment with curve tangents
-Instance Realization: Geometry processing for mesh operations
-Surface Analysis: Normal-based offset computation
-Thread Generation: 3D cylindrical thread creation
-Geometry Combination: Final assembly with original mesh
-API Compatibility
-Built for Blender 4.5+ using modern interface.new_socket() API
-Backward compatible with Blender 4.2+
-Utilizes the latest Geometry Nodes features for optimal performance
-⚡ Usage Instructions
-Basic Workflow
-Select your mesh object
-Add the Neural Stitcher modifier:
-Navigate to the Modifiers panel
-Click "Add Modifier"
-Select "Neural Stitcher" from the menu
-Configure parameters as needed
-Apply or adjust for desired results
-Parameter Guide
-Parameter	Description	Range	Default
-Stitch Area	Vertex group defining stitch locations	0.0 - 1.0	Auto-detect
-Stitch Count	Number of stitches along the path	1 - 5000	50
-Stitch Length	Length of each stitch	0.001 - 1.0	0.05
-Thread Thickness	Radius of the thread geometry	0.0001 - 0.1	0.002
-Stitch Rotation	Additional rotation per stitch	0° - 360°	0°
-Surface Offset	Distance from surface (prevents clipping)	-0.1 - 0.1	0.001
-Advanced Tips
-Create vertex groups to precisely define where stitches appear.
-Use Weight Paint mode for detailed control.
-Ensure clean edge loops for best results.
-For performance, start with lower stitch counts on complex meshes.
-<sub>Those who take shortcuts may find the Overlord’s patience wearing thin.</sub>
+- **Blender 4.5.0** or higher
+- Mesh objects with defined edge loops
+- Basic understanding of Blender's modifier system
 
-🐛 Troubleshooting
-Common Issues
-No stitches appear:
+## 🔧 Installation
 
-Ensure mesh has edge loops in the selected area
-Check vertex group weights (> 0.5)
-Verify Stitch Count isn’t too low
-Stitches appear in the wrong location:
+1. Download `nazarick_stitcher_addon_Version2.py` from this repository
+2. Open Blender → Edit → Preferences → Add-ons
+3. Click "Install..." and select the downloaded Python file
+4. Enable "Nazarick Stitcher — Procedural Stitches (Blender 4.5)"
+5. The panel will appear in the 3D Viewport sidebar (press **N** → **Nazarick** tab)
 
-Adjust Surface Offset
-Check mesh normals
-Ensure vertex group weights are correct
-Performance is slow:
+## 🧵 Usage Guide
 
-Reduce Stitch Count on complex meshes
-Lower Thread Thickness detail
-Use simpler profile curves if customized
-Known Limitations
-Works best with manifold meshes
-Very complex geometry may need parameter tweaks
-Extremely small or large objects may need offset adjustments
-<sub>Unresolved issues reflect poorly in Nazarick’s eyes. Strive always for excellence.</sub>
+### Basic Workflow
 
-🔄 Version History
-v4.0.1 (Current)
-Addon now properly appears in Blender's Add-ons panel
-Improved error handling and user feedback
-Comprehensive documentation and installation guides
-v3.0.0 (Legacy)
-Original procedural stitching implementation
-Basic Geometry Nodes pipeline
-Blender 4.5 compatibility
-🤝 Contributing
-Contributions are welcome!
-Feel free to report bugs, suggest features, submit pull requests, or improve the documentation.
+1. **Select your mesh object**
+2. **Choose placement method**:
+   - **Along Edges**: Tag edges in Edit Mode, then use "Along Tagged/Seams"
+   - **On Surface**: Use "On Surface" for distributed stitching
+3. **Add the modifier** from the Nazarick panel
+4. **Adjust parameters** in the modifier properties
+5. **Optional**: Apply Nazarick materials and world theme
 
-<sub>All who contribute are watched. Diligence and care are rewarded. Wasting the Overlord’s time is... inadvisable.</sub>
+### Edge Tagging (For Seam Mode)
 
-📄 License
-This project is licensed under the GPL-3.0 License. See the LICENSE file for details.
+1. Enter **Edit Mode** (Tab)
+2. Select edges where you want stitches
+3. In the Nazarick panel, click **"Tag Selected Edges"**
+4. Exit Edit Mode and add the "Along Tagged/Seams" modifier
 
-With inspiration and guidance from the Great Tomb of Nazarick.
-Work with care, for the shadows are patient but never blind.
+### Parameter Guide
 
-If this pleases you, Master, command me to commit it. If you wish further adjustments, say but the word.
+| Parameter | Description | Range | Default |
+|-----------|-------------|-------|---------|
+| **Spacing** | Distance between stitches | 0.001 - 0.2 | 0.02 |
+| **Radius** | Thickness of thread | 0.0001 - 0.05 | 0.005 |
+| **Length** | Length of each stitch | 0.001 - 0.2 | 0.02 |
+| **Random Rotation** | Variation in stitch angle | 0° - 90° | 10° |
+| **Surface Density** | Stitches per unit area | 0 - 2000 | 200 |
 
+## 🎨 Nazarick Theme (Optional)
+
+The addon includes optional theming tools:
+
+- **Apply World**: Sets a subtle dark Nazarick-inspired environment
+- **Forge Materials**: Creates three themed materials:
+  - **Nazarick Gold**: Metallic gold finish
+  - **Nazarick Onyx**: Deep black stone
+  - **Nazarick Bone**: Weathered bone texture
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**No stitches appear:**
+- Ensure edges are properly tagged (for seam mode)
+- Check that spacing/density isn't too low
+- Verify the mesh has proper geometry
+
+**Stitches in wrong location:**
+- Adjust surface offset in modifier properties
+- Check mesh normals (face orientation)
+- Ensure clean edge loops
+
+**Performance issues:**
+- Reduce stitch count/density on complex meshes
+- Lower thread detail if needed
+
+## 🔄 Version History
+
+**v1.1.0 (Current)**
+- ✅ **Fixed Blender 4.5 compatibility** - Resolved `new_socket()` API issues
+- ✅ Cleaned up repository structure
+- ✅ Updated documentation
+
+**Previous versions:**
+- Various experimental implementations removed for clarity
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to:
+- Report bugs or issues
+- Suggest improvements
+- Submit pull requests
+- Improve documentation
+
+*"All who contribute are watched. Diligence and care are rewarded."*
+
+## 📄 License
+
+This project is licensed under the GPL-3.0 License.
+
+---
+
+### *"We endure. We refine. We perfect."*
+*— With inspiration from the Great Tomb of Nazarick*
+
+*Patience, precision, inevitability — our way.*
