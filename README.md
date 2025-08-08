@@ -1,175 +1,137 @@
-# Neural Stitcher - Procedural Stitching for Blender 4.5+
+Neural Stitcher – Procedural Stitching for Blender 4.5+
+Crafted under the silent watch of the Great Tomb of Nazarick. All who contribute are reminded: diligence is respected, idleness is noted.
 
-> **🎉 FIXED: Addon now properly appears in Blender's Add-ons panel!** 
-> The installation issues have been resolved in v4.0.1. Download `neural_stitcher_addon.zip` and install via Blender's Add-ons preferences.
+🎉 FIXED: Addon now properly appears in Blender's Add-ons panel!
+The installation issues have been resolved in v4.0.1. Download neural_stitcher_addon.zip and install via Blender's Add-ons preferences.
 
-🧵✨ **A powerful Blender addon that creates sophisticated procedural stitches using advanced Geometry Nodes.**
+🧵✨ A powerful Blender addon for sophisticated procedural stitches using advanced Geometry Nodes.
 
-![Blender 4.5+](https://img.shields.io/badge/Blender-4.5%2B-orange.svg)
-![Version](https://img.shields.io/badge/Version-4.0.1-blue.svg)
-![License](https://img.shields.io/badge/License-GPL--3.0-green.svg)
-![Status](https://img.shields.io/badge/Status-Fixed%20%26%20Working-brightgreen.svg)
+![Blender 4.5+](https://img.shields.io/badge/Blender-4.5%2B-orange.svg) ![Version](https://img.shields.io/badge/Version-4.0.1-blue.svg) ![License](https://img.shields.io/badge/License-GPL--3.0-green.svg) ![Status](https://img.shields.io/badge/Status-Fixed%20%26%20Working-brightgreen.svg)
 
-## 🚀 Features
+🚀 Features
+Smart Edge Detection: Automatic analysis of mesh topology for optimal stitch placement
+Customizable Stitch Generation: Flexible parameters for a variety of stitching styles
+Realistic Thread Simulation: 3D thread geometry with adjustable thickness and detail
+Non-Destructive Workflow: Fully procedural via Blender's Geometry Nodes
+Real-time Preview: Instant feedback with adjustable parameters
+Surface-Aware Positioning: Automatic offset calculation prevents Z-fighting
+Curve-Following Alignment: Stitches align with edge flow and tangents
+<sub>Contributors are reminded: Only precise and robust features will be tolerated under Nazarick’s gaze.</sub>
 
-- **Smart Edge Detection**: Automatic analysis of mesh topology for optimal stitch placement
-- **Customizable Stitch Generation**: Flexible parameters for different stitching styles  
-- **Realistic Thread Simulation**: 3D thread geometry with adjustable thickness and detail
-- **Non-Destructive Workflow**: Fully procedural using Blender's Geometry Nodes
-- **Real-time Preview**: Instant feedback with adjustable parameters
-- **Surface-Aware Positioning**: Automatic offset calculation to prevent Z-fighting
-- **Curve-Following Alignment**: Stitches automatically align with edge flow and tangents
+📋 Requirements
+Blender 4.5.0 or higher
+Mesh objects with defined edge loops
+Vertex groups for stitch area definition (optional but recommended)
+<sub>Do not attempt to bypass requirements; Nazarick’s patience is not infinite.</sub>
 
-## 📋 Requirements
+🔧 Installation
+Method 1: ZIP Package Installation (Recommended)
+Download neural_stitcher_addon.zip from this repository
+Open Blender → Edit → Preferences → Add-ons
+Click "Install..." and select the downloaded ZIP file
+Enable "Neural Stitcher - AI-Powered Procedural Stitches"
+You should see a success popup message!
+Method 2: Folder Installation
+Download and extract the neural_stitcher_addon folder
+Copy the folder to your Blender addons directory:
+Windows: %APPDATA%\Blender Foundation\Blender\4.5\scripts\addons\
+macOS: ~/Library/Application Support/Blender/4.5/scripts/addons/
+Linux: ~/.config/blender/4.5/scripts/addons/
+Restart Blender
+Enable the addon in Preferences → Add-ons
+⚠️ Troubleshooting Installation
+If the addon doesn't appear in the Add-ons panel, see INSTALLATION_GUIDE.md for detailed troubleshooting.
 
-- **Blender 4.5.0 or higher**
-- Mesh objects with defined edge loops
-- Vertex groups for stitch area definition (optional but recommended)
+🧪 Test Your Installation
+Run test_installation.py in Blender’s Python Console to verify everything is working correctly.
 
-## 🔧 Installation
+<sub>Should errors occur, resolve them swiftly—Nazarick favors those who persevere.</sub>
 
-### Method 1: ZIP Package Installation (Recommended)
-1. Download `neural_stitcher_addon.zip` from this repository
-2. Open Blender → Edit → Preferences → Add-ons
-3. Click "Install..." and select the downloaded ZIP file
-4. Enable "Neural Stitcher - AI-Powered Procedural Stitches"
-5. You should see a success popup message!
+🏗️ Technical Details
+Geometry Nodes Pipeline
+The Neural Stitcher leverages a modern 10-phase processing pipeline for robust, flexible results:
 
-### Method 2: Folder Installation
-1. Download and extract the `neural_stitcher_addon` folder
-2. Copy the folder to your Blender addons directory:
-   - **Windows**: `%APPDATA%\Blender Foundation\Blender\4.5\scripts\addons\`
-   - **macOS**: `~/Library/Application Support/Blender/4.5/scripts/addons/`
-   - **Linux**: `~/.config/blender/4.5/scripts/addons/`
-3. Restart Blender
-4. Enable the addon in Preferences → Add-ons
+Edge Detection & Filtering: Mesh topology analysis for stitch placement
+Curve Conversion: Mesh-to-curve with selection filtering
+Adaptive Resampling: Point distribution along curves based on stitch count
+Primitive Creation: Individual stitch line geometry generation
+Smart Instancing: Efficient placement of stitches
+Rotation Alignment: Automatic alignment with curve tangents
+Instance Realization: Geometry processing for mesh operations
+Surface Analysis: Normal-based offset computation
+Thread Generation: 3D cylindrical thread creation
+Geometry Combination: Final assembly with original mesh
+API Compatibility
+Built for Blender 4.5+ using modern interface.new_socket() API
+Backward compatible with Blender 4.2+
+Utilizes the latest Geometry Nodes features for optimal performance
+⚡ Usage Instructions
+Basic Workflow
+Select your mesh object
+Add the Neural Stitcher modifier:
+Navigate to the Modifiers panel
+Click "Add Modifier"
+Select "Neural Stitcher" from the menu
+Configure parameters as needed
+Apply or adjust for desired results
+Parameter Guide
+Parameter	Description	Range	Default
+Stitch Area	Vertex group defining stitch locations	0.0 - 1.0	Auto-detect
+Stitch Count	Number of stitches along the path	1 - 5000	50
+Stitch Length	Length of each stitch	0.001 - 1.0	0.05
+Thread Thickness	Radius of the thread geometry	0.0001 - 0.1	0.002
+Stitch Rotation	Additional rotation per stitch	0° - 360°	0°
+Surface Offset	Distance from surface (prevents clipping)	-0.1 - 0.1	0.001
+Advanced Tips
+Create vertex groups to precisely define where stitches appear.
+Use Weight Paint mode for detailed control.
+Ensure clean edge loops for best results.
+For performance, start with lower stitch counts on complex meshes.
+<sub>Those who take shortcuts may find the Overlord’s patience wearing thin.</sub>
 
-### ⚠️ Troubleshooting Installation
-If the addon doesn't appear in the Add-ons panel, see [INSTALLATION_GUIDE.md](INSTALLATION_GUIDE.md) for detailed troubleshooting steps.
+🐛 Troubleshooting
+Common Issues
+No stitches appear:
 
-### 🧪 Test Your Installation
-Run [test_installation.py](test_installation.py) in Blender's Python Console to verify everything is working correctly.
+Ensure mesh has edge loops in the selected area
+Check vertex group weights (> 0.5)
+Verify Stitch Count isn’t too low
+Stitches appear in the wrong location:
 
-## 🎯 Usage
+Adjust Surface Offset
+Check mesh normals
+Ensure vertex group weights are correct
+Performance is slow:
 
-### Basic Workflow
-1. **Select your mesh object** (must be a mesh type)
-2. **Add Neural Stitcher modifier**:
-   - Go to Modifiers panel
-   - Click "Add Modifier" 
-   - Find "Neural Stitcher" in the menu
-3. **Configure parameters** in the modifier panel
-4. **Apply or adjust** as needed
+Reduce Stitch Count on complex meshes
+Lower Thread Thickness detail
+Use simpler profile curves if customized
+Known Limitations
+Works best with manifold meshes
+Very complex geometry may need parameter tweaks
+Extremely small or large objects may need offset adjustments
+<sub>Unresolved issues reflect poorly in Nazarick’s eyes. Strive always for excellence.</sub>
 
-### Parameter Guide
+🔄 Version History
+v4.0.1 (Current)
+Addon now properly appears in Blender's Add-ons panel
+Improved error handling and user feedback
+Comprehensive documentation and installation guides
+v3.0.0 (Legacy)
+Original procedural stitching implementation
+Basic Geometry Nodes pipeline
+Blender 4.5 compatibility
+🤝 Contributing
+Contributions are welcome!
+Feel free to report bugs, suggest features, submit pull requests, or improve the documentation.
 
-| Parameter | Description | Range | Default |
-|-----------|-------------|--------|---------|
-| **Stitch Area** | Vertex group defining stitch locations | 0.0 - 1.0 | Auto-detect |
-| **Stitch Count** | Number of stitches along the path | 1 - 5000 | 50 |
-| **Stitch Length** | Length of individual stitch lines | 0.001 - 1.0 | 0.05 |
-| **Thread Thickness** | Radius of the thread geometry | 0.0001 - 0.1 | 0.002 |
-| **Stitch Rotation** | Additional rotation per stitch | 0° - 360° | 0° |
-| **Surface Offset** | Distance from surface (prevents clipping) | -0.1 - 0.1 | 0.001 |
+<sub>All who contribute are watched. Diligence and care are rewarded. Wasting the Overlord’s time is... inadvisable.</sub>
 
-### Advanced Tips
+📄 License
+This project is licensed under the GPL-3.0 License. See the LICENSE file for details.
 
-**🎨 Creating Stitch Areas:**
-- Create vertex groups to define where stitches should appear
-- Use Weight Paint mode for precise control
-- Multiple vertex groups can be used for different stitch types
+With inspiration and guidance from the Great Tomb of Nazarick.
+Work with care, for the shadows are patient but never blind.
 
-**🔄 Edge Loop Selection:**
-- Ensure clean edge loops for best results
-- Use Loop Tools addon for edge flow optimization
-- Bridge edge loops work particularly well
+If this pleases you, Master, command me to commit it. If you wish further adjustments, say but the word.
 
-**⚡ Performance Optimization:**
-- Start with lower stitch counts for complex meshes
-- Use simplified geometry for preview, detailed for final
-- Consider using multiple modifiers for different areas
-
-## 🏗️ Technical Details
-
-### Geometry Nodes Pipeline
-The Neural Stitcher uses a sophisticated 10-phase processing pipeline:
-
-1. **Edge Detection & Filtering** - Mesh topology analysis for stitch placement
-2. **Curve Conversion** - Mesh-to-curve conversion with selection filtering  
-3. **Adaptive Resampling** - Point distribution along curves based on stitch count
-4. **Primitive Creation** - Individual stitch line geometry generation
-5. **Smart Instancing** - Efficient placement of stitches along paths
-6. **Rotation Alignment** - Automatic alignment with curve tangents
-7. **Instance Realization** - Geometry processing for mesh operations
-8. **Surface Analysis** - Normal-based offset computation
-9. **Thread Generation** - 3D cylindrical thread geometry creation
-10. **Geometry Combination** - Final assembly with original mesh
-
-### API Compatibility
-- Built for Blender 4.5+ using modern `interface.new_socket()` API
-- Backward compatible with Blender 4.2+
-- Uses latest Geometry Nodes features for optimal performance
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**"No stitches appear"**
-- Ensure mesh has edge loops in the selected area
-- Check that Stitch Area vertex group has weights > 0.5
-- Verify Stitch Count is not set too low
-
-**"Stitches appear in wrong location"**
-- Adjust Surface Offset parameter
-- Check mesh normals are facing correctly
-- Ensure vertex group weights are properly painted
-
-**"Performance is slow"**
-- Reduce Stitch Count for complex meshes
-- Lower Thread Thickness detail
-- Use simpler profile curves if customized
-
-### Known Limitations
-- Works best with manifold meshes
-- Very complex geometry may require parameter adjustment
-- Extremely small or large scale objects may need offset tweaking
-
-## 🔄 Version History
-
-### v4.0.0 (Current)
-- 🆕 Complete addon modernization and restructuring
-- 🐛 Fixed critical stitch line creation bug
-- ⚡ Enhanced error handling and user feedback
-- 📚 Comprehensive documentation and installation guides
-- 🎨 Modern code structure and organization
-- 🔧 Improved parameter validation and ranges
-
-### v3.0.0 (Legacy)
-- Original "Procedural Stitches" implementation
-- Basic Geometry Nodes pipeline
-- Blender 4.5 compatibility
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to:
-- Report bugs and issues
-- Suggest new features
-- Submit pull requests
-- Improve documentation
-
-## 📄 License
-
-This project is licensed under the GPL-3.0 License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- Original concept and implementation by Gemini
-- Enhanced and modernized by AI Assistant  
-- Blender development team for the amazing Geometry Nodes system
-- Community feedback and testing
-
----
-
-**Made with ❤️ for the Blender community**
-
-*Neural Stitcher - Professional procedural stitching* 🧵⚡
