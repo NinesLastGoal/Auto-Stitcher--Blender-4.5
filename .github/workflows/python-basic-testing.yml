@@ -1,0 +1,91 @@
+# ================================================================================================
+# Nazarick Stitcher - Python Basic Testing Workflow
+# Ensuring Code Excellence Worthy of the Great Tomb
+# ================================================================================================
+#
+# This workflow validates the Python codebase for the Nazarick Stitcher Blender addon,
+# maintaining the high standards expected in the service of the Supreme Overlord.
+#
+# Triggers: Changes to any Python files in the repository
+# Environment: Python 3.11 to match Blender 4.5's environment
+# Validations: Code linting with flake8, unit tests if available
+#
+
+name: Python Basic Testing
+
+on:
+  push:
+    paths:
+      - "**/*.py"
+  pull_request:
+    paths:
+      - "**/*.py"
+
+jobs:
+  python-quality-assurance:
+    name: Code Quality Validation
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Acquire Repository Assets
+      uses: actions/checkout@v4
+      
+    - name: Establish Python 3.11 Environment
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Cache Python Dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+          
+    - name: Install Base Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8
+        
+    - name: Install Project Dependencies (if present)
+      run: |
+        if [ -f requirements.txt ]; then
+          echo "Installing dependencies from requirements.txt..."
+          pip install -r requirements.txt
+        else
+          echo "No requirements.txt found - proceeding with base dependencies only"
+        fi
+        
+    - name: Execute Code Linting Analysis
+      run: |
+        # Configure flake8 for Blender addon standards
+        # Allow longer lines for descriptive addon metadata
+        # Focus on critical errors while allowing some flexibility for addon-specific patterns
+        flake8 . \
+          --count \
+          --max-line-length=100 \
+          --statistics \
+          --show-source \
+          --extend-ignore=E203,W503 \
+          --exclude=.git,__pycache__,.pytest_cache,.tox,dist,build
+          
+    - name: Execute Unit Test Discovery (if available)
+      run: |
+        if [ -d "tests" ]; then
+          echo "Test directory found - executing unittest discovery..."
+          python -m unittest discover -s tests -p "test_*.py" -v
+        else
+          echo "No tests directory found - test execution skipped"
+          echo "Consider adding tests to ensure the quality standards of Nazarick"
+        fi
+        
+    - name: Validate Import Structure
+      run: |
+        echo "Validating Python import structure..."
+        # Check that Python files can be imported without syntax errors
+        find . -name "*.py" -not -path "./.git/*" -not -path "./__pycache__/*" | while read file; do
+          echo "Validating: $file"
+          python -m py_compile "$file"
+        done
+        echo "Import validation complete"
